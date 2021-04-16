@@ -10,6 +10,9 @@ class WebController {
     }
     
     public function home() {
+        if (! auth()->check())
+            return redirect('/login');
+        
         echo view()->render("home", [
             "title" => "Home",
             "users" => (new User())->find()->fetch(true) ?? []

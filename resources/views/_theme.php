@@ -33,6 +33,17 @@
                             </a>
                         </form>
                     </li>
+                <?php else: ?>
+                    <li>
+                        <a href="<?= url('/register'); ?>">
+                            Register
+                        </a>
+                    </li>
+                    <li>
+                        <a href="<?= url('/login'); ?>">
+                            Login
+                        </a>
+                    </li>
                 <?php endif; ?>
                 </ul>
             </li>
@@ -41,7 +52,7 @@
 
     <main>
         <?php if (session()->has('message')): ?>
-            <div class="message-<?= session()->get('type'); ?>"> <?= session()->get('message') ?> </div>
+            <div class="message-<?= session()->pull('type'); ?>"> <?= session()->pull('message') ?> </div>
         <?php endif; ?>
         <?= $v->section('content'); ?>
     </main>
