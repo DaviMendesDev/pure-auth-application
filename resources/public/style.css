@@ -1,0 +1,201 @@
+:root {
+    --primary-color: #FEFEFE;
+    --secondary-color: #222222;
+    --terciary-color: #444;
+    --gray-color: #999;
+    --lightgray-color: #CCC;
+    --lightgreen-color: #3C3;
+
+    font-size: 16px;
+    font-family: sans-serif;
+    color: var(--secondary-color);
+}
+
+*,
+::before,
+::after {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 0;
+    margin: 0;
+}
+
+body.dark {
+    --primary-color: #222222;
+    --secondary-color: #FEFEFE;
+}
+
+input {
+    border: 1px solid var(--gray-color);
+    padding: .3em .6em;
+    margin: 1em auto;
+    height: 3em;
+    border-radius: .3em;
+    display: block;
+    width: 90%;
+}
+
+nav {
+    display: block;
+    margin: 0 0 1em;
+    padding: 1em 0;
+    background-color: var(--terciary-color);
+    color: var(--primary-color);
+}
+
+footer {
+    display: block;
+    margin: 1em 0 0;
+    padding: 1em 0;
+    background-color: var(--terciary-color);
+    color: var(--primary-color);
+}
+
+main {
+    margin: 1em 3em;
+}
+
+.login-form,
+.register-form {
+    margin: 1em auto;
+    width: auto;
+    display: block;
+    border: 1px solid var(--secondary-color);
+    background-color: white;
+    border-radius: 1em;
+    max-width: 30%;
+    padding: 1em 0em;
+}
+
+.form-buttons {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0 auto;
+    width: 90%;
+}
+
+.form-buttons > * {
+    border-radius: .5em;
+    height: 2.4em;
+    margin: .5em;
+    width: 40%;
+    display: inline-block;
+    cursor: pointer;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    transition: all .3s;
+}
+
+.form-buttons > *:disabled {
+    color: var(--primary-color);
+}
+
+.form-buttons > *:hover {
+    background-color: var(--gray-color);
+    color: white;
+    transition: all .3s;
+}
+
+.form-title {
+    text-align: center;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.text-error {
+    color: #F77;
+    font-size: .9em;
+    text-align: center;
+    display: block;
+    margin: .5em auto;
+    width: 80%;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    display: inline-block;
+    width: auto;
+    margin: 0 .3em;
+    padding: 0;
+}
+
+input:disabled {
+    font-weight: bold;
+    color: var(--gray-color);
+}
+
+button {
+    display: inline-block;
+    width: auto;
+    margin: 0 .3em;
+    padding: .5em 1em;
+    background-color: var(--terciary-color);
+    color: var(--primary-color);
+    border: 0;
+}
+
+.separator {
+    display: block;
+    border: 1px solid #EEE;
+    width: 92%;
+    margin: .5em auto 2em;
+}
+
+.labed-input {
+    display: flex;
+    width: 90%;
+    margin: .5em auto;
+}
+
+.labed-input > label {
+    margin: 0 .3em;
+}
+
+*[class~="message-"] {
+    border: 1px solid var(--lightgray-color);
+    color: var(--lightgray-color);
+    font-weight: bold;
+    border-radius: 1em;
+    margin: 1em .3em;
+    padding: .5em 1em;
+}
+
+*[class~="success"] {
+    color: var(--lightgreen-color);
+    border-color: var(--lightgreen-color);
+}
+
+.app-title {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+ul, ol {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+}
+
+li {
+    display: inline;
+}
+
+* + * {
+    margin: 0 .5em;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    height: 100%;
+    display: block;
+}
+
+a:hover {
+    text-decoration: underline;
+}

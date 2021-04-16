@@ -1,0 +1,32 @@
+{
+    "name": "system0xff/pure-auth-application",
+    "license": "MIT",
+    "description": "",
+    "authors": [
+        {
+            "name": "DaviMendesDev",
+            "email": "davi.mendes.dev@gmail.com"
+        }
+    ],
+    "require": {
+        "phpmailer/phpmailer": "^6.4",
+        "coffeecode/datalayer": "^1.1",
+        "coffeecode/router": "^1.0",
+        "symfony/var-dumper": "^5.2",
+        "league/plates": "v4.0.0-alpha"
+    },
+    "config": {
+        "vendor-dir": "vendor"
+    },
+    "autoload": {
+        "psr-4": {
+            "Source\\": "source/"
+        },
+        "files": [
+            "source/Config.php"
+        ]
+    },
+    "require-dev": {
+        "symfony/debug": "^4.4"
+    }
+}
